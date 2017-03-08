@@ -148,9 +148,9 @@ find . -type f -exec chown bitrix:bitrix {} \;
 
 ###Перезапуск демонов: например для  httpd (для остальных аналогично)
 
-> service httpd stop — остановка демона
-> service httpd start — запуск демона
-> service httpd restart — рестарт демона (аналогично start и stop) 
+> `service httpd stop` — остановка демона  
+> `service httpd start` — запуск демона  
+> `service httpd restart` — рестарт демона (аналогично start и stop)   
 
 
 ##Дополнительные утилиты   
@@ -267,8 +267,8 @@ find . -type f -exec chown bitrix:bitrix {} \;
 > `mysql> grant all privileges on my_site.* to my_site@'localhost' identified by 'PASSWORD';`   
 > назначение прав на базу (указывается база и пароль)  
 
-> `mysql> exit` — Выход из режима MYSQL  
-> `service mysql` restart — перезапуск демона MySQL  
+> `mysql> exit` — Выход из режима MYSQL    
+> `service mysql restart` — перезапуск демона MySQL  
 
 ###Список типичных действий для существующей базы данных  
 
@@ -291,9 +291,9 @@ find . -type f -exec chown bitrix:bitrix {} \;
 
 > `mysql dbname <  backup_bdname.sql` — залить файл "backup\_bdname.sql" в базу dbname  
 > `mysqldump my_site > my_site.sql` — создание файла дампа базы (бэкапа) из базы my\_site в файл my\_site.sql  
-> `mysqldump -uUSERNAME -pPASSWORD my_site > my_site.sql` 
-> Если пользователь не имеет прав на работу с базой, необходимо указывать права:  
-сначала указываем команду, логин и пароль от БАЗЫ, затем действия    
+> `mysqldump -uUSERNAME -pPASSWORD my_site > my_site.sql`   
+> Если пользователь не имеет прав на работу с базой, необходимо указывать права.     
+> **Итого: сначала указываем команду, логин и пароль от БАЗЫ, затем действия**    
 
 
 
